@@ -1,0 +1,19 @@
+
+header {
+  display: flex;
+  height: 520px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: #e38f35;
+  flex-direction: column;
+  padding-top: 10%;
+}
+
+header div img {
+  padding-top: 5%;
+  background-color: #e38f35;
+  background-image: ("/images/profile-hex.png");
+}
+
+
