@@ -15,9 +15,9 @@ $(document).ready(function() {
 
     if (counter < 0) {
       $charCount.css("color", "red");
-        } else {
+    } else {
       $charCount.css("color", "black");
-        }
+    }
 
   });
 

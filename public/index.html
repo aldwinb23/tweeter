@@ -51,20 +51,41 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
-        <!-- <h2>Compose Tweet</h2> -->
         <form method="POST" action="/tweets">
-          <!-- <label for="tweet-text">What are you humming about?</label> -->
           <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
           <div class="tweet-container">
+
             <button type="submit">Tweet</button>
-            <output 
-              name="counter"
-              class="counter"
-              for="tweet-text">140
-            </output>
+            <output name="counter" class="counter" for="tweet-text">140</output>
 
           </div>
         </form>
+
+      <article class="old-tweet-container">
+        <header>
+          <!-- <img src="/images/dogimage.jpg">  -->
+          <i class="fa-solid fa-dog"></i>
+          <div>Arya</div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div class="tweethandle">@AryaDawg</div>
+        </header>
+        <div class="article-body"> TEST </div>
+        <footer>
+          <div>10 days ago</div>
+          <div class="small-icon">
+            <i class="fa-solid fa-flag"></i>
+            <i class="fa-solid fa-retweet"></i>
+            <i class="fa-solid fa-heart"></i>
+          </div>
+        </footer>
+      </article>
       </section>
     </main>
 

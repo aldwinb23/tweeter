@@ -1,4 +1,8 @@
 
+.container {
+  padding: 2%;
+}
+
 #tweet-text {
   border : 0px solid #000000;
   border-bottom-width : 2px;
@@ -19,4 +23,68 @@ button {
   display: flex;
   justify-content: space-between;
   font-family: 'Bungee', cursive;
+}
+
+article {
+  border: black;
+  border-width: 2px;
+  align-content: center;
+  justify-content: center;
+}
+
+article.old-tweet-container {
+  color: rgb(60, 56, 56);
+  border: black;
+  border-width: 2px;
+  border : 2px solid #000000;
+  margin: 1% 0 0 0;
+  justify-content: center;
+}
+
+article.old-tweet-container:hover {
+  box-shadow: 3px 3px 0 rgb(45, 42, 42);
+}
+
+article header {
+  background-color: #e4d3c1;
+  height: 100px;
+  justify-content: space-between;
+  align-content: space-between;
+  flex-direction: row;
+  align-items: start;
+  padding: 4% 2%
+}
+
+.article-body {
+  justify-content: center;
+  align-items: center;
+  color: red;
+  height: 50px;
+  border: 0px solid #000000;
+  border-bottom-width: 2px;
+  width: 75vw;
+}
+
+article footer {
+  display: flex;
+  height: 50px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: space-between;
+  padding: 4% 2%;
+  font-size: 0.75em;
+}
+
+.tweethandle {
+  color: gray;
+}
+
+.small-icon {
+  width: 10%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.small-icon i:hover {
+  color: blue;
 }
