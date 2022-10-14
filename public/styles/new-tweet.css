@@ -39,6 +39,9 @@ article.old-tweet-container {
   border : 2px solid #000000;
   margin: 1% 0 0 0;
   justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 article.old-tweet-container:hover {
@@ -47,7 +50,7 @@ article.old-tweet-container:hover {
 
 article header {
   background-color: #e4d3c1;
-  height: 100px;
+  height: 120px;
   justify-content: space-between;
   align-content: space-between;
   flex-direction: row;
@@ -55,14 +58,21 @@ article header {
   padding: 4% 2%
 }
 
+.icon-name {
+  background-color: #e4d3c1;
+  display: flex;
+  width: 20%;
+  justify-content: space-around;
+  margin-bottom: 20%;
+}
+
 .article-body {
-  justify-content: center;
-  align-items: center;
-  color: red;
+  display: flex;
   height: 50px;
   border: 0px solid #000000;
   border-bottom-width: 2px;
   width: 75vw;
+  padding: 1% 0 0 1%;
 }
 
 article footer {
@@ -73,6 +83,7 @@ article footer {
   align-content: space-between;
   padding: 4% 2%;
   font-size: 0.75em;
+  width: 80vw;
 }
 
 .tweethandle {
