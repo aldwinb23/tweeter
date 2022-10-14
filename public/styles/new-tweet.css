@@ -1,4 +1,6 @@
 
+/* 760px */
+
 .container {
   padding: 2%;
 }
@@ -7,8 +9,8 @@
   border : 0px solid #000000;
   border-bottom-width : 2px;
   background-color : transparent;
-  width: 80vw;
-  height: 3vw;
+  width: 90vw;
+  height: 4rem;
   font-family: 'Source Sans Pro', sans-serif;
 }
 
@@ -42,6 +44,7 @@ article.old-tweet-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 article.old-tweet-container:hover {
@@ -51,11 +54,17 @@ article.old-tweet-container:hover {
 article header {
   background-color: #e4d3c1;
   height: 120px;
+  width: 98%;
   justify-content: space-between;
   align-content: space-between;
   flex-direction: row;
   align-items: start;
   padding: 4% 2%
+}
+
+header div img {
+  padding-top: 5%;
+  background-color: #e4d3c1;
 }
 
 .icon-name {
@@ -68,10 +77,10 @@ article header {
 
 .article-body {
   display: flex;
-  height: 50px;
+  height: 4.5rem;
   border: 0px solid #000000;
   border-bottom-width: 2px;
-  width: 75vw;
+  width: 85vw;
   padding: 1% 0 0 1%;
 }
 
@@ -83,7 +92,7 @@ article footer {
   align-content: space-between;
   padding: 4% 2%;
   font-size: 0.75em;
-  width: 80vw;
+  width: 90vw;
 }
 
 .tweethandle {
@@ -91,11 +100,22 @@ article footer {
 }
 
 .small-icon {
-  width: 10%;
+  width: 10vw;
   display: flex;
   justify-content: space-between;
 }
 
 .small-icon i:hover {
   color: blue;
+}
+
+.error-message {
+  display: none;
+  height: 5vw;
+  background-color: rgb(238, 144, 144);
+}
+
+
+@media only screen and (min-width: 768px) {
+  /* Write CSS rules that target Tablets screen sizes upwards - including desktops */
 }

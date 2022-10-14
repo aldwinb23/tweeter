@@ -7,33 +7,52 @@
 $(document).ready(function() {
 
   $('.tweet-form').on('submit', function(event) {
-  
-    event.preventDefault();
+    
+    const $text = $('#tweet-text').val();
 
+    event.preventDefault();
+    
     const dataToServer = $('.tweet-form').serialize();
+
+
+    const errMessage = $('.error-message');
   
-    if (dataToServer.length === 5) {
-      return alert("You didn't type anything!");
+    if ($text.length === 0) {
+      errMessage.slideDown(800);
+      return errMessage.text("You didn't type anything!");
     
-    } else if (dataToServer.length > 145) {
-      return alert("You exceed the maximum characters allowed!");
-    
-    } else {
-      $.ajax({
-        url: '/tweets',
-        method: 'POST',
-        data: dataToServer,
-        success: (data) => {
-          loadtweets();
-        },
-        error: (error) => {
-          console.log('this request failed and this was the error', error);
-        }
-      });
     }
-      
+    
+    if ($text.length > 140) {
+      errMessage.slideDown(800);
+      return errMessage.text("You exceed the maximum characters allowed!");
+    
+    }
+    
+    errMessage.slideUp(800)
+
+    $.ajax({
+      url: '/tweets',
+      method: 'POST',
+      data: dataToServer,
+      success: (data) => {
+        loadtweets();
+      },
+      error: (error) => {
+        console.log('this request failed and this was the error', error);
+      }
+    });
+    
+
+    $('.tweet-form')[0].reset();
+
   });
 
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
   
   const createTweetElement = (tweet) => {
     let $tweet = $(`
@@ -41,11 +60,11 @@ $(document).ready(function() {
         <header>
           <div class="icon-name">
             <img src="${tweet.user.avatars}">
-            <div>${tweet.user.name}</div>
+            <div>${escape(tweet.user.name)}</div>
           </div>
           <div class="tweethandle">${tweet.user.handle}</div>
         </header>
-        <div class="article-body"> ${tweet.content.text} </div>
+        <div class="article-body"> ${escape(tweet.content.text)} </div>
         <footer>
           <div>${timeago.format(tweet.created_at)}</div>
           <div class="small-icon">

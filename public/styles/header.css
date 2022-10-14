@@ -1,5 +1,29 @@
 
+/* 760 */
+
+
 header {
+  display: flex;
+  height: 520px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: #e38f35;
+  flex-direction: column;
+  padding-top: 15%;
+}
+
+.photo {
+  padding-top: 5%;
+  background-color: #e38f35;
+  background-image: ("/images/profile-hex.png");
+}
+
+@media only screen and (min-width: 768px) {
+  /* Write CSS rules that target Tablets screen sizes upwards - including desktops */
+}
+
+/* header {
   display: flex;
   height: 520px;
   width: 100%;
@@ -14,6 +38,4 @@ header div img {
   padding-top: 5%;
   background-color: #e38f35;
   background-image: ("/images/profile-hex.png");
-}
-
-
+} */

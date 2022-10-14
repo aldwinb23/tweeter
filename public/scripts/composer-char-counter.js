@@ -7,6 +7,7 @@ $(document).ready(function() {
 
     let numOfEnteredChars = $(this).val().length;
     let counter = maxNumOfChars - numOfEnteredChars;
+    
     $charCount.text(counter);
 
     if (counter < 0) {
@@ -14,7 +15,11 @@ $(document).ready(function() {
     } else {
       $charCount.css("color", "black");
     }
-
+    
+    
   });
 
 });
+
+
+
