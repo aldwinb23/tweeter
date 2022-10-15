@@ -42,6 +42,9 @@ $(document).ready(function() {
 
     $('.tweet-form')[0].reset();
 
+    $('.counter').val('140');
+
+
   });
 
 
