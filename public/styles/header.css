@@ -4,13 +4,12 @@
 
 header {
   display: flex;
-  height: 520px;
   width: 100%;
   justify-content: center;
   align-items: center;
   background-color: #e38f35;
   flex-direction: column;
-  padding-top: 15%;
+  padding-top: 20%;
 }
 
 .photo {
@@ -19,23 +18,29 @@ header {
   background-image: ("/images/profile-hex.png");
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 780px) {
   /* Write CSS rules that target Tablets screen sizes upwards - including desktops */
+  
+  header {
+    width: 40%;
+    background-color: #e4d3c1;
+    padding: 10%;  
+  }
+  
+  .side-bar {
+    background-color: #e38f35;
+    padding: 0 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .photo {
+    justify-content: center;
+    align-items: flex-start
+  }
+
+  
+  
 }
 
-/* header {
-  display: flex;
-  height: 520px;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  background-color: #e38f35;
-  flex-direction: column;
-  padding-top: 10%;
-}
-
-header div img {
-  padding-top: 5%;
-  background-color: #e38f35;
-  background-image: ("/images/profile-hex.png");
-} */

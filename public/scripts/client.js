@@ -14,19 +14,16 @@ $(document).ready(function() {
     
     const dataToServer = $('.tweet-form').serialize();
 
-
     const errMessage = $('.error-message');
   
     if ($text.length === 0) {
       errMessage.slideDown(800);
       return errMessage.text("You didn't type anything!");
-    
     }
     
     if ($text.length > 140) {
       errMessage.slideDown(800);
       return errMessage.text("You exceed the maximum characters allowed!");
-    
     }
     
     errMessage.slideUp(800)
@@ -42,7 +39,6 @@ $(document).ready(function() {
         console.log('this request failed and this was the error', error);
       }
     });
-    
 
     $('.tweet-form')[0].reset();
 
@@ -59,7 +55,7 @@ $(document).ready(function() {
       <article class="old-tweet-container">
         <header>
           <div class="icon-name">
-            <img src="${tweet.user.avatars}">
+            <img class="icon-photo" src="${tweet.user.avatars}">
             <div>${escape(tweet.user.name)}</div>
           </div>
           <div class="tweethandle">${tweet.user.handle}</div>

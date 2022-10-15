@@ -39,7 +39,7 @@ article.old-tweet-container {
   border: black;
   border-width: 2px;
   border : 2px solid #000000;
-  margin: 1% 0 0 0;
+  margin: 2% 0 0 0;
   justify-content: center;
   display: flex;
   flex-direction: column;
@@ -62,8 +62,9 @@ article header {
   padding: 4% 2%
 }
 
-header div img {
+.icon-photo {
   padding-top: 5%;
+  margin-left: 20%;
   background-color: #e4d3c1;
 }
 
@@ -100,7 +101,7 @@ article footer {
 }
 
 .small-icon {
-  width: 10vw;
+  width: 20%;
   display: flex;
   justify-content: space-between;
 }
@@ -111,11 +112,70 @@ article footer {
 
 .error-message {
   display: none;
-  height: 5vw;
+  height: 1.75rem;
   background-color: rgb(238, 144, 144);
+  justify-content: center;
 }
 
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 780px) {
   /* Write CSS rules that target Tablets screen sizes upwards - including desktops */
+  .container {
+    padding-top: 20vh;
+  }
+
+  #tweet-text {
+    width: 55vw;
+  }
+
+  article {
+    display: flex;
+    border: black;
+    border-width: 2px;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  article.old-tweet-container {
+    margin: 2% 0 0 0;
+  }
+
+  article header {
+    height: 90px;
+    width: 98%;
+    justify-content: space-between;
+    align-content: space-between;
+    flex-direction: row;
+    align-items: start;
+    padding: 1% 2em;
+  }
+  
+  .article-body {
+    width: 95%;
+  }
+  
+
+  article footer {
+    display: flex;
+    height: 60px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: space-between;
+    padding: 3% 3%;
+    font-size: 0.75em;
+    width: 100%;
+  }
+  
+  .icon-photo {
+    padding-top: 5%;
+    background-color: #e4d3c1;
+    margin-left: 2px;
+
+  }
+
+  .small-icon {
+    width: 15%;
+  }
+
 }

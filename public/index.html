@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
+
     <!-- Meta Information -->
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 
@@ -18,7 +20,7 @@
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
-    
+
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -32,33 +34,41 @@
   </head>
 
   <body>
+
     <!-- Top nav bar (fixed) -->
     <nav>
+
       <span>Tweeter</span>
       <div>
+
         <p class="write"><b>Write</b> a new tweet</p>
         <i class="fa-sharp fa-solid fa-angles-down"></i>
+
       </div>
     </nav>
 
     <header>
-      <div>
-          <img class="photo" src="/images/profile-hex.png"> 
-      </div>
-      <br>
-      <div>
-          <h2><b>Aldwin</b> B</h2>
-      </div>
-  </header>
+      <section class="side-bar">
 
+        <div>
+          <img class="photo" src="/images/profile-hex.png"> 
+        </div>
+        <br>
+        <div>
+          <h2><b>Aldwin</b> B</h2>
+        </div>
+        
+      </section>
+    </header>
 
     <!-- Page-specific (main) content here -->
     <main class="container">
+
       <section class="new-tweet">
 
         <div class="error-message"></div>
-
         <form method="POST" action="/tweets" class="tweet-form">
+
           <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
           <div class="tweet-container">
 
@@ -66,17 +76,11 @@
             <output name="counter" class="counter" for="tweet-text">140</output>
 
           </div>
+
         </form>
-
-      
-
-        <div id="tweets-container">
-        
-
-        </div>
+        <div id="tweets-container"></div>
 
       </section>
     </main>
-
   </body>
 </html>
