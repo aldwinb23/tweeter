@@ -44,11 +44,14 @@ $(document).ready(function() {
 
   });
 
+
   const escape = function (str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
+
   };
+
   
   const createTweetElement = (tweet) => {
     let $tweet = $(`
@@ -73,14 +76,18 @@ $(document).ready(function() {
     `);
 
     return $tweet;
+
   }
 
 
   const renderTweets = function(tweets) {
 
+    const $container = $('#tweets-container');
+    $container.empty();
+
     for (let tweet of tweets) {
       const $newTweet = createTweetElement(tweet);
-      $('#tweets-container').prepend($newTweet);
+      $container.prepend($newTweet);
     }
 
   }
@@ -98,7 +105,9 @@ $(document).ready(function() {
         console.log('this request failed and this was the error', error);
       }
     });
+
   }
+
 
   loadtweets();
 

@@ -1,7 +1,4 @@
 
-/* 760 */
-
-
 header {
   display: flex;
   width: 100%;
@@ -18,8 +15,8 @@ header {
   background-image: ("/images/profile-hex.png");
 }
 
+
 @media only screen and (min-width: 780px) {
-  /* Write CSS rules that target Tablets screen sizes upwards - including desktops */
   
   header {
     width: 40%;
@@ -40,7 +37,5 @@ header {
     align-items: flex-start
   }
 
-  
-  
 }
 

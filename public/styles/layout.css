@@ -14,13 +14,10 @@
  * Global layout stuff
  */
 
-/* 760px */
-
 body {
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 1.5em;
   background-color: #e38f35;
-
 }
 
 main {
@@ -30,8 +27,9 @@ main {
   align-items: center;
 }
 
+
 @media only screen and (min-width: 780px) {
-  /* Write CSS rules that target Tablets screen sizes upwards - including desktops */
+
   body {
     display: flex;
   }
@@ -43,24 +41,6 @@ main {
   }
 
 }
-
-/* body {
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 1.5em;
-  background-color: #e38f35;
-  ;
-
-}
-
-main {
-  display: flex;
-  background-color: #e4d3c1;
-  justify-content: center;
-  width: 90%;
-  align-items: center;
-  margin: 0 auto;
-} */
-
 
 
 /*

@@ -1,6 +1,4 @@
 
-/* 760px */
-
 nav {
   height: 120px;
   width: 100vw;
@@ -33,7 +31,7 @@ nav div i {
 
 
 @media only screen and (min-width: 780px) {
-  /* Write CSS rules that target Tablets screen sizes upwards - including desktops */
+
   nav {
     background-color: #2105af;
   }
